@@ -1,20 +1,16 @@
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-
 def generate_wordcloud(text):
     # Create WordCloud object
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
-    
     # Display the generated word cloud
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
     plt.show()
-
 # Example text
 text = """
 Python is an amazing programming language. It is simple and easy to learn. Python is widely used in web development, data science, artificial intelligence, and more. With Python, you can build a variety of applications and projects.
 """
-
 # Generate word cloud
 generate_wordcloud(text)
